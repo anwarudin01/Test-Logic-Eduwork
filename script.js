@@ -93,22 +93,22 @@ test();
 // int : 39, maka outputnya adalah : tiga puluh sembilan
 // int : 104, maka outputnya adalah : silahkan masukkan bilangan 1-100
 
-function terbilang(x) {
+function tulisan(nilai) {
   var ambil = new Array('', 'SATU', 'DUA', 'TIGA', 'EMPAT', 'LIMA', 'ENAM', 'TUJUH', 'DELAPAN', 'SEMBILAN', 'SEPULUH', 'SEBELAS');
-  if (parseFloat(x) < 12) {
-    x = Math.floor(x);
-    return ' ' + ambil[x];
-  } else if (parseFloat(x) < 20) {
-    return terbilang(parseFloat(x) - 10) + ' BELAS';
-  } else if (parseFloat(x) < 100) {
-    return terbilang(parseFloat(x) / 10) + ' PULUH' + terbilang(parseFloat(x) % 10);
-  } else if (parseFloat(x) === 100) {
+  if (parseFloat(nilai) < 12) {
+    nilai = Math.floor(nilai);
+    return ' ' + ambil[nilai];
+  } else if (parseFloat(nilai) < 20) {
+    return tulisan(parseFloat(nilai) - 10) + ' BELAS';
+  } else if (parseFloat(nilai) < 100) {
+    return tulisan(parseFloat(nilai) / 10) + ' PULUH' + tulisan(parseFloat(nilai) % 10);
+  } else if (parseFloat(nilai) === 100) {
     return 'SERATUS';
-  } else if (parseFloat(x) > 100) {
+  } else if (parseFloat(nilai) > 100) {
     return 'silahkan masukkan bilangan 1-100';
   }
 }
-console.log(terbilang(10));
+console.log(tulisan(55));
 // --------------------------------------------------------
 
 // 6.
